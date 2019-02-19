@@ -31,7 +31,7 @@ public class Proov4{
 		System.out.println("Millises suunas liigub "+t.nimi+"?");
 		System.out.println("üles/alla/paremale/vasakule");
         sisend = input.nextLine();
-        kaugus = (luna.x - noah.x) + (luna.y - noah.y);
+        kaugus = ((luna.x - noah.x) + (luna.y - noah.y)) + 1;
 		
 		if (sisend.equals("üles")) {
 			t.muudaSuund(Suund.YLES);
@@ -67,11 +67,17 @@ public class Proov4{
 
 
 /* TULEMUS
-
-MANGJA Luna kohal -1, 1, suunaga VASAKULE
-MANGJA Noah kohal 3, 3, suunaga YLES
-Mängijad on üksteisest 5 käigu kaugusel
-Millises suunas liigub Noah?
+MANGJA Luna kohal 0, 0, suunaga YLES
+MANGJA Noah kohal 3, 0, suunaga ALLA
+Mängijad on üksteisest 3 käigu kaugusel
+Millises suunas liigub Luna?
 üles/alla/paremale/vasakule
+
+...
+
+MANGJA Luna kohal 2, 0, suunaga PAREMALE
+MANGJA Noah kohal 2, 0, suunaga VASAKULE
+Mängijad on üksteisest 0 käigu kaugusel
+Mängijad leidsid üksteist üles!!
 
 */
