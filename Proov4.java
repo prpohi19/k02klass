@@ -58,7 +58,7 @@ public class Proov4{
         System.out.println(noah);
         System.out.println("Mängijad on üksteisest " + Math.abs(kaugus) + " käigu kaugusel");  
 		if(luna.x == noah.x && luna.y == noah.y) {
-            System.out.println("Mängijad leidsin üksteist üles!!");
+            System.out.println("Mängijad leidsid üksteist üles!!");
             return true;
 		}
 		return false;
