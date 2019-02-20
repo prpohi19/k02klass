@@ -1,61 +1,53 @@
+//Mäng "amm võidab alati"
+//Jüri ajas laaberdamisega amma vihaseks ja peab jooksma.
+//Juhi Jüri turvalisusesse
+
+import java.lang.Math;
 import java.util.Scanner;
 public class Proov3{
+  public static final String ANSI_PURPLE = "\u001B[35m";
+  public static final String ANSI_RESET = "\u001B[0m";
   public static void main(String[] arg){
-    Tegelane juku=new Tegelane();
-    Tegelane kati=new Tegelane();
-    kati.tyyp=Tyyp.KOLETIS;
-    juku.liigu();
-    kati.muudaSuund(Suund.YLES);
-    kati.liigu();
-    System.out.println(juku);
-    System.out.println(kati);
-    //System.out.println(juku.kaugus(kati));
-    while(juku.x!=kati.x && juku.y!=kati.y && lugeja.hasNextLine()){
-      Scanner lugeja=new Scanner(System.in);
-      System.out.println("Palun Juku suunda: ");
-      Scanner
-      String sisend=lugeja.nextLine();
-      if(sisend.equals("v")){
-        juku.muudaSuund(Suund.VASAKULE);
-      }
-      if(sisend.equals("p")){
-        juku.muudaSuund(Suund.PAREMALE);
-      }
-      if(sisend.equals("y")){
-        juku.muudaSuund(Suund.YLES);
-      }
-      if(sisend.equals("a")){
-        juku.muudaSuund(Suund.ALLA);
-      }
-      juku.liigu();
-      System.out.println(juku);
-
-      System.out.println("Palun Kati suunda: ");
+    Scanner lugeja=new Scanner(System.in);
+    Tegelane jyri=new Tegelane();
+    jyri.x=5;
+    Koletis amm=new Koletis();
+    String sisend;
+    amm.tyyp=Tyyp.KOLETIS;
+    jyri.liigu();
+    amm.muudaSuund(Suund.YLES);
+    amm.liigu();
+    System.out.println(jyri);
+    System.out.println(amm);
+    while(jyri.x!=amm.x && jyri.y!=amm.y){
+      System.out.println(ANSI_PURPLE);
+      System.out.println("Palun Jüri suunda (wasd): ");
       sisend=lugeja.nextLine();
-      if(sisend.equals("v")){
-        kati.muudaSuund(Suund.VASAKULE);
-      }
-      if(sisend.equals("p")){
-        kati.muudaSuund(Suund.PAREMALE);
-      }
-      if(sisend.equals("y")){
-        kati.muudaSuund(Suund.YLES);
-      }
       if(sisend.equals("a")){
-        kati.muudaSuund(Suund.ALLA);
+        jyri.muudaSuund(Suund.VASAKULE);
       }
-      kati.liigu();
-      System.out.println(kati);
-      lugeja.close();
+      if(sisend.equals("d")){
+        jyri.muudaSuund(Suund.PAREMALE);
+      }
+      if(sisend.equals("w")){
+        jyri.muudaSuund(Suund.YLES);
+      }
+      if(sisend.equals("s")){
+        jyri.muudaSuund(Suund.ALLA);
+      }
+      jyri.liigu();
+      System.out.println(jyri);
+
+      if(Math.abs(amm.x-jyri.x) > Math.abs(amm.y-jyri.y)) {
+      	if(amm.x > jyri.x) { amm.x--; }
+      	if(amm.x < jyri.x) { amm.x++; }
+      } else {
+      	if(amm.y > jyri.y) { amm.y--; }
+      	if(amm.y < jyri.y) { amm.y++; }
+      }
+      System.out.println(amm);
     }
-    System.out.println("Game over! ");
+  System.out.println("Jüri sai ämmamoorilt Panniga pähe! ");
+  System.out.println(ANSI_RESET);
   }
 }
-
-/*
-Koostada programm kahe tegelasega, kes algus teineteisest on mõne sammu kaugusel.
-Programm hakkab kordamööda küsima millises suunas kumbki liigub. Enterivajutusel liigutakse samas suunas edasi.
-Iga sammu järgi kuvatakse kummagi tegelase koordinaadid.
-Kui teineteisega samale ruudule satutakse, lõpeb mäng
-if(sisend.equals("v")){}
-*/
