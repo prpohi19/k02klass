@@ -1,6 +1,7 @@
 //Mäng "Ämm võidab alati"
-//Jüri ajas laaberdamisega amma vihaseks ja peab jooksma.
-//Juhi Jüri turvalisusesse
+//Jüri ajas laaberdamisega Ämmamoori vihaseks ja peab jooksma.
+//Suurest vihast on Ämmamoor automatiseerunud
+
 
 import java.lang.Math;
 import java.util.Scanner;
@@ -17,11 +18,13 @@ public class Ämmahirm{
     jyri.liigu();
     amm.muudaSuund(Suund.YLES);
     amm.liigu();
+    System.out.println("Jüri ajas laaberdamisega Ämmamoori vihaseks ja peab jooksma.");
     System.out.println(jyri);
     System.out.println(amm);
+    System.out.println("------------------------------------------------------------");
     while(jyri.x!=amm.x || jyri.y!=amm.y){
       System.out.println(ANSI_PURPLE);
-      System.out.println("Palun Jüri suunda (wasd): ");
+      System.out.println("Kuhu suunas jookseb Jüri? (wasd): ");
       sisend=lugeja.nextLine();
       if(sisend.equals("a")){
         jyri.muudaSuund(Suund.VASAKULE);
@@ -47,9 +50,8 @@ public class Ämmahirm{
       }
       System.out.println(amm);
     }
+  System.out.println("----------------------------------");
   System.out.println("Jüri sai ämmamoorilt Panniga pähe! ");
-  System.out.println(jyri);
-  System.out.println(amm);
   System.out.println(ANSI_RESET);
   }
 }
