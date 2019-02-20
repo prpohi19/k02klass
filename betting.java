@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -41,6 +43,9 @@ public class betting {
             System.out.println("Te kaotasite: " + betSize*betLoss + " Eurot!");
             System.out.println("");
             losses++;
+            if(balance > balanceMax){
+                balanceMax = balance;
+            }
         }
         return balance;
     }
