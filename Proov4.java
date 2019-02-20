@@ -75,8 +75,8 @@ public class Proov4 {
         for (char[] row: kaart) // https://stackoverflow.com/a/7118214
             Arrays.fill(row, '_'); // täida massiiv
 
-        kaart[luna.x][luna.y] = 'L';
-        kaart[noah.x][noah.y] = 'N';
+        kaart[luna.x][luna.y] = luna.nimi.charAt(0);
+        kaart[noah.x][noah.y] = noah.nimi.charAt(0);
 
         for(int i = 0; i < kaardixy; i++){
             for (int j = 0; j < kaardixy; j++) {
@@ -96,3 +96,59 @@ public class Proov4 {
     }
 
 }
+
+
+/* Näidisväljund
+
+_ _ _ _ _ _ _ _ _ _ 
+L _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ N _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+Millises suunas liigub Noah?
+üles/alla/paremale/vasakule/suva
+suva
+_ _ _ _ _ _ _ _ _ _ 
+L _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+N _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+Millises suunas liigub Luna?
+üles/alla/paremale/vasakule/suva
+alla
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+L _ _ _ _ _ _ _ _ _ 
+N _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+Millises suunas liigub Noah?
+üles/alla/paremale/vasakule/suva
+üles
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+N _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+_ _ _ _ _ _ _ _ _ _ 
+Mängijad jõudsid kokku!
+
+*/
