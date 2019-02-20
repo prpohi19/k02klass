@@ -5,20 +5,20 @@ import java.util.Random;
 public class Shop {
     private int x, y;
     private String name;
+    private TypeOfCharacter typeOfCharacter;
     private TypeOfShop typeOfShop;
     private IsAttackable isAttackable;
-    private TypeOfCharacter typeOfCharacter;
 
-    public Shop(String name, TypeOfShop typeOfShop, IsAttackable ia) {
+    public Shop(String name, TypeOfShop typeOfShop, IsAttackable isAttackable) {
         Random r = new Random();
         x = r.nextInt((10 - 1) + 1) + 1;
         y = r.nextInt((10 - 1) + 1) + 1;
+        
         typeOfCharacter = TypeOfCharacter.NPC;
-        Character c = new Character(typeOfCharacter);
 
         this.typeOfShop = typeOfShop;
         this.name = name;
-        this.isAttackable = ia;
+        this.isAttackable = isAttackable;
     }
 
     public String toString() {
