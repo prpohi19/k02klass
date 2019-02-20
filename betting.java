@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -53,6 +55,11 @@ public class betting {
         System.out.println("Valik 3 - Võit 1/1 panusest, kaotus 1/1 panusest, numbrid 1 - 6");
         System.out.println("Valik 4 - Võit 2/1 panusest, kaotus 1/1 panusest, numbrid 1 - 12");
         System.out.println("Valik 5 - Võit 4/1 panusest, kaotus 1/1 panusest, numbrid 1 - 24");
+        System.out.println("Valik 10 - Väike laen");
+        System.out.println("Valik 11 - Keskmine laen");
+        System.out.println("Valik 12 - Suur laen");
+        System.out.println("Valik 13 - Maksa laen tagasi");
+        System.out.println("Valik 99 - Välju");
     }
 
     public static void gameOver(){
