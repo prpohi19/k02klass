@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.Scanner;
 
 
@@ -55,9 +57,9 @@ public class Main {
 
             while(betChoice == 10){
                 if(activeLoan != 1) {
-                    balance = Loan.loan(balance, Size.SMALL);
+                    balance += Loan.loan(balance, Size.SMALL);
                     activeLoan = 1;
-                    loanSize = Loan.loanSize(Size.SMALL);
+                    loanSize = Loan.loan(balance, Size.SMALL);
                 }else{
                     System.out.println("Teil on juba laen võetud!");
                 }
@@ -66,9 +68,9 @@ public class Main {
 
             while(betChoice == 11){
                 if(activeLoan != 1) {
-                    balance = Loan.loan(balance, Size.MEDIUM);
+                    balance += Loan.loan(balance, Size.MEDIUM);
                     activeLoan = 1;
-                    loanSize = Loan.loanSize(Size.MEDIUM);
+                    loanSize = Loan.loan(balance, Size.MEDIUM);
                 }else{
                     System.out.println("Teil on juba laen võetud!");
                 }
@@ -77,9 +79,9 @@ public class Main {
 
             while(betChoice == 12){
                 if(activeLoan != 1) {
-                    balance = Loan.loan(balance, Size.BIG);
+                    balance += Loan.loan(balance, Size.BIG);
                     activeLoan = 1;
-                    loanSize = Loan.loanSize(Size.BIG);
+                    loanSize = Loan.loan(balance, Size.BIG);
                 }else{
                     System.out.println("Teil on juba laen võetud!");
                 }
