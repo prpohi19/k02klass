@@ -64,24 +64,6 @@ public class Juku{
         Juku.muudaSuund(Suund.YLES);
         Juku.liigu();
 				break;
-		/*	case 5:
-        Juku.muudaSuund(Suund.YLES);
-        Juku.liigu();
-        Juku.muudaSuund(Suund.VASAKULE);
-				Juku.liigu();
-				break;
-			case 6:
-        Juku.muudaSuund(Suund.YLES);
-        Juku.liigu();
-        Juku.muudaSuund(Suund.VASAKULE);
-				Juku.liigu();
-				break;*/
-		/*	case 7:
-        Juku.muudaSuund(Suund.YLES);
-        Juku.liigu();
-        Juku.muudaSuund(Suund.VASAKULE);
-				Juku.liigu();
-				break;*/
 		}
 
 		System.out.print("koletis on kohal ");
